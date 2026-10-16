@@ -1,37 +1,26 @@
 #include <iostream>
+#include<utility>
 using namespace std;
 
 int main()
 {
+    int num1,num2,m,n;
     
-    int num[100],divisor[100];
-    int num1,num2,i,ans;
+    cout << "Enter the first number (positive):";
+    cin >> m;
+    num1 = m;
+    cout << "Enter the second number (positive):";
+    cin >> n;
+    num2 = n;
     
-    cout << "Enter the first number :" << endl;
-    cin >> num1;
-    cout << "Enter the second number :" << endl;
-    cin >> num2;
-    
-    if (num1 < num2)
+    while(n!=0)
     {
-        i = num1;
-        num1 = num2;
-        num2 = i;
-    }
+    	m = m % n;
+    	if(m < n)
+    		swap(m,n);
+	}
     
-    for(i=0;i<num2;++i)
-    {
-        if(num2%i==0)
-            num[i]= i;
-            
-        if(num1%num[i]==0)
-           {
-            divisor[i]= num[i];
-            ans = divisor[i];
-           }
-    }
-    
-    cout << endl << ans;
+    cout << "The greatest common divisor (GCD) between " << num2 << " and " << num1 << " is:" << m;
     
     return 0;
 }

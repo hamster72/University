@@ -7,8 +7,9 @@ int main()
     int num[100];
     int number,i;
     
-    cout << "Enter a number between 1 to 100:" << endl;
+    cout << "Enter a number between 1 & 100:";
     cin >> number;
+    cout << "Factors are:" << endl;
     
     for(i=1;i<=number;++i)
     {
@@ -16,10 +17,9 @@ int main()
         if(number%i==0)
         {
             num[i]=i;
-            cout << num[i] << endl;
+            cout << num[i] << " ";
         }
     }
-    
     
     return 0;
 }

@@ -7,12 +7,12 @@ int main()
 	while(hours>0)
 	{
 		seconds+=3600;
-		hours--; 
+		--hours; 
 	}
 	while(minutes>0)
 	{
 		seconds+=60;
-		minutes--; 
+		--minutes;
 	}
 	cout << "Total seconds:" << seconds;
 	return 0;

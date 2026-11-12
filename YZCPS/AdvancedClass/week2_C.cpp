@@ -6,7 +6,6 @@ int main()
 {
 	long long n,q,a,b;
 	
-	
 	while( cin >> n >> q )
 	{
 		vector<long long> sum(n+1,0);
